@@ -1,0 +1,35 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="container container-login">
+    <div style="text-align: center">
+      <h1>Sign In</h1>
+    </div>
+    <form>
+      <div class="form-group">
+        <label>
+          <h6>Email</h6>
+        </label>
+        <input class="form-control" type="email">
+      </div>
+      <div class="form-group">
+        <label>
+          <h6>Senha</h6>
+        </label>
+        <input class="form-control" type="password">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-outline-success btn-md btn-block" (click)="logar()">Sign In</button>
+      </div>
+      <div style="text-align: center">
+        <h5>Ou</h5>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary btn-md btn-block" [routerLink]="['/cadastro-usuario']">Crie sua conta</button>
+      </div>
+    </form>
+  </div>
+</ion-content>

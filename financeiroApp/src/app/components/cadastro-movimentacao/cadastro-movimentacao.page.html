@@ -1,0 +1,47 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="container container-cadastro-usuario">
+    <div style="text-align: center">
+      <h1>Registrar Movimentação</h1>
+    </div>
+    <form>
+      <div class="form-group">
+        <label>
+          <h6>Valor</h6>
+        </label>
+        <input class="form-control" type="number">
+      </div>
+      <div class="form-group">
+        <label>
+          <h6>Tipo</h6>
+        </label>
+        <select class="form-control">
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label>
+          <h6>Data</h6>
+        </label>
+        <input class="form-control" type="date">
+      </div>
+      <div class="form-group">
+        <label>
+          <h6>Descrição</h6>
+        </label>
+        <input class="form-control" type="text">
+      </div>
+      <div class="form-group">
+        <button (click)="cadastrar()" class="btn btn-outline-success btn-md btn-block">Cadastrar</button>
+      </div>
+      <button class="btn btn-outline-warning" [routerLink]="['/home']">Cancelar</button>
+
+      <div class="form-group">
+      </div>
+    </form>
+  </div>
+</ion-content>

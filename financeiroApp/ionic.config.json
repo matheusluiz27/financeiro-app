@@ -1,5 +1,7 @@
 {
   "name": "financeiroApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

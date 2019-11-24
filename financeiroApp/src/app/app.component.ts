@@ -17,9 +17,19 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
+      title: 'Movimentações',
+      url: 'movimentacoes',
       icon: 'list'
+    },
+    {
+      title: 'Registrar movimentação',
+      url: 'cadastro-movimentacao',
+      icon: 'add'
+    },
+    {
+      title: 'Sair',
+      url: 'login',
+      icon: 'exit'
     }
   ];
 
