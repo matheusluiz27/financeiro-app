@@ -13,13 +13,13 @@
         <label>
           <h6>Email</h6>
         </label>
-        <input class="form-control" type="email">
+        <input [(ngModel)]="login.email" name="email" class="form-control" type="email">
       </div>
       <div class="form-group">
         <label>
           <h6>Senha</h6>
         </label>
-        <input class="form-control" type="password">
+        <input [(ngModel)]="login.senha" name="senha" class="form-control" type="password">
       </div>
       <div class="form-group">
         <button class="btn btn-outline-success btn-md btn-block" (click)="logar()">Sign In</button>
