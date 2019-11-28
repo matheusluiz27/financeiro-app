@@ -3,15 +3,58 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="container-home">
+    <h1 style="text-align: center;">Gerencie</h1>
+    <br>
+    <br>
+    <ion-grid>
+      <ion-row class="totais">
+        <ion-col>
+          <div>
+            <span class="text-secondary">
+              <h3>Total:</h3>
+            </span>
+            <span class="text-secondary">
+              <h5>Entradas:</h5>
+            </span>
+            <span class="text-secondary">
+              <h5>Saídas:</h5>
+            </span>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <span class="text-secondary">
+              <h3>R$ {{caixaInfo.total}}</h3>
+            </span>
+            <span class="text-success">
+              <h5>{{caixaInfo.totalEntradas}}</h5>
+            </span>
+            <span class="text-danger">
+              <h5>{{caixaInfo.totalSaidas}}</h5>
+            </span>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
   <div>
+    <canvas id="grafico"></canvas>
+  </div>
 
-    <canvas id="grafico"></canvas>    
+  <div class="container-home">
+
+    <div class="form-group">
+      <button class="btn btn-outline-success btn-md btn-block" [routerLink]="['/cadastro-movimentacao']">Cadastrar
+        Movimentação</button>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-outline-primary btn-md btn-block" [routerLink]="['/movimentacoes']">Ver
+        movimentações</button>
+    </div>
   </div>
 </ion-content>
