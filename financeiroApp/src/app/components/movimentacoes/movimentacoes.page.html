@@ -11,12 +11,11 @@
   <div class="pesquisa-mes">
     <h3 style="margin-bottom: 30px; margin-top: 25px">Movimentações</h3>
     <form>
-      <label>Digite um mês (mm/yy):</label>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Digite um mês (MM/AA)" aria-describedby="btnGroupAddon">
+        <input type="text" [(ngModel)]="data" class="form-control" placeholder="Pesquise por um mês" name="data" type="date" aria-describedby="btnGroupAddon">
 
         <div class="input-group-prepend">
-          <div id="btnGroupAddon"><button class="btn btn-outline-dark">Pesquisar</button></div>
+          <div id="btnGroupAddon"><button (click)="buscarPorMes()"  class="btn btn-outline-dark">Pesquisar</button></div>
         </div>
       </div>
     </form>
@@ -40,13 +39,13 @@
       <ion-col>
         <div>
           <span class="text-secondary">
-            <h3>R$ 500,00</h3>
+            <h3>{{caixaInfo.total}}</h3>
           </span>
           <span class="text-success">
-            <h5>R$ 500,00</h5>
+            <h5>{{caixaInfo.totalEntradas}}</h5>
           </span>
           <span class="text-danger">
-            <h5>R$ 500,00</h5>
+            <h5>{{caixaInfo.totalSaidas}}</h5>
           </span>
         </div>
       </ion-col>
@@ -56,22 +55,24 @@
   <!--movimentações-->
   <div class="container">
 
-    <div class="card border-success card-style">
-      <div class="card-body">
-        <h5 class="card-title text-success"><small>Entrada:</small> R$ 500,00</h5>
-        <p class="card-text">Data: 12/09/2019</p>
-        <p class="card-text">Descrição: Bico</p>
+    <div *ngFor="let m of movimentacoes" >
+      <div *ngIf="m.tipo == 'ENTRADA'"  class="card border-success card-style">
+        <div class="card-body">
+          <h5 class="card-title text-success"><small>Entrada:</small> R$ {{m.valor}}</h5>
+          <p class="card-text">Data: {{m.data}}</p>
+          <p class="card-text">Descrição: {{m.descricao}}</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card border-danger card-style">
-      <div class="card-body">
-        <h5 class="card-title text-danger"><small>Saída:</small> R$ 500,00</h5>
-        <p class="card-text">Data: 12/09/2019</p>
-        <p class="card-text">Descrição: Lanche</p>
+      <div *ngIf="m.tipo == 'SAIDA'" class="card border-danger card-style">
+        <div class="card-body">
+          <h5 class="card-title text-danger"><small>Saída:</small> R$ {{m.valor}}</h5>
+          <p class="card-text">Data: {{m.data}}</p>
+          <p class="card-text">Descrição: {{m.descricao}}</p>
+        </div>
       </div>
+      <br>
     </div>
-    <br>
   </div>
 
 </ion-content>
