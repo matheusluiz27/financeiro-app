@@ -13,19 +13,19 @@
           <label>
             <h6>Email</h6>
           </label>
-          <input class="form-control" type="email">
+          <input [(ngModel)]="usuario.email" name="email" class="form-control" type="email">
         </div>
         <div class="form-group">
           <label>
             <h6>Senha</h6>
           </label>
-          <input class="form-control" type="password">
+          <input [(ngModel)]="usuario.senha" name="senha" class="form-control" type="password">
         </div>
         <div class="form-group">
             <label>
               <h6>Digite a senha novamente</h6>
             </label>
-            <input class="form-control" type="password">
+            <input [(ngModel)]="senhaConfirmada" name="senhaConfirmada" class="form-control" type="password">
           </div>
         <div class="form-group">
           <button (click)="cadastrar()" class="btn btn-outline-primary btn-md btn-block">Cadastrar</button>
