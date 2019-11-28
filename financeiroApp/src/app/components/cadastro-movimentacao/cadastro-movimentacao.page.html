@@ -17,29 +17,29 @@
         <label>
           <h6>Valor</h6>
         </label>
-        <input class="form-control" type="number">
+        <input [(ngModel)]="movimentacao.valor" name="valor" class="form-control" type="number">
       </div>
       <div class="form-group">
         <label>
           <h6>Tipo</h6>
         </label>
-        <select class="form-control browser-default custom-select">
+        <select [(ngModel)]="movimentacao.tipo" name="tipo" class="form-control browser-default custom-select">
           <option selected disabled>Selecione um tipo</option>
-          <option>Entrada</option>
-          <option>Saída</option>
+          <option>ENTRADA</option>
+          <option>SAIDA</option>
         </select>
       </div>
       <div class="form-group">
         <label>
           <h6>Data</h6>
         </label>
-        <input class="form-control" type="date">
+        <input [(ngModel)]="movimentacao.data" name="valor" class="form-control" type="date">
       </div>
       <div class="form-group">
         <label>
           <h6>Descrição</h6>
         </label>
-        <input class="form-control" type="text">
+        <input [(ngModel)]="movimentacao.descricao" name="descricao" class="form-control" type="text">
       </div>
       <div class="form-group">
         <button (click)="cadastrar()" class="btn btn-outline-success btn-md btn-block">Cadastrar</button>
